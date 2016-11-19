@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<project name ="orianeng" default="jar">
+
+<target name="info">
+<echo>info block executed </echo>
+<echo>this file is added into workspace</echo>
+</target>
+
+<target name="clean">
+<echo>clean block executed </echo>
+</target>
+
+<target name="compile">
+<echo>compile block executed </echo>
+</target>
+
+<target name="run" >
+<echo>run block executed </echo>
+</target>
+
+<target name="jar" depends="run,compile,clean,info">
+<echo>jar block executed </echo>
+</target>
+</project>
+

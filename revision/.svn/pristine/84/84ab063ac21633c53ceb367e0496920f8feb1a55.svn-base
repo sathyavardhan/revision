@@ -1,0 +1,23 @@
+porject 1 
+
+
+.data 0x10010000
+fact: .space 4
+.text
+.globl main
+
+main: addu $s0, $ra, $0
+lui $s1,0x1001
+ori $t0,$0,12
+ori $t4,$0,1
+addi $t1,$t0,-1
+mul $t3,$t1,$t0
+
+loop: beq $t1,$t4,slese
+addi $t1,$t1,-1
+mul $t3,$t3,$t1
+j loop
+
+slese: sw $t3,0($s1)
+addu $ra,$0,$s0
+jr $ra

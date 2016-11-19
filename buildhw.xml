@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<project name ="orianeng" default="jar">
+
+<target name="info">
+<echo>info block executed </echo>
+<echo>this file is added into workspace</echo>
+</target>
+
+<target name="clean">
+<echo>clean block executed </echo>
+</target>
+
+<target name="compile">
+<echo>compile block executed </echo>
+<javac srcdir="D:/Devops Training/java files" destdir="java files" />
+</target>
+
+<target name="run" >
+<echo>run block executed </echo>
+<java classname="Home">
+<classpath path="D:/Devops Training/java files" />
+</java>
+</target>
+
+<target name="jar">
+<echo>jar block executed </echo>
+<mkdir dir="C:/Users/SATHYA VARDHAN/Desktop/revision/jar"/>
+
+<jar destfile="revision/jar/mine.jar" basedir="D:/Devops Training/java files">
+ 
+</jar>
+</target>
+</project>
+
